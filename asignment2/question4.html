@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List Style Properties Example</title>
+    <style>
+        /* List Style Type */
+        ul.circle { list-style-type: circle; }
+        ol.roman { list-style-type: upper-roman; }
+        
+        /* List Style Image */
+        ul.image { list-style-image: url('https://via.placeholder.com/15'); }
+
+        /* List Style Position */
+        ul.inside { list-style-position: inside; }
+        
+        /* Removing Default List Style */
+        ul.no-style { list-style-type: none; padding: 0; }
+        
+        /* Custom Marker */
+        ul.custom li::before { content: "✓ "; color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>List Styles</h1>
+    
+    <ul class="circle">
+        <li>Circle Bullet 1</li>
+        <li>Circle Bullet 2</li>
+    </ul>
+
+    <ol class="roman">
+        <li>Roman 1</li>
+        <li>Roman 2</li>
+    </ol>
+
+    <ul class="image">
+        <li>Image Bullet 1</li>
+        <li>Image Bullet 2</li>
+    </ul>
+
+    <ul class="inside">
+        <li>Inside Bullet 1</li>
+        <li>Inside Bullet 2</li>
+    </ul>
+
+    <ul class="no-style">
+        <li>No Bullet 1</li>
+        <li>No Bullet 2</li>
+    </ul>
+
+    <ul class="custom">
+        <li>Custom Marker 1</li>
+        <li>Custom Marker 2</li>
+    </ul>
+</body>
+</html>

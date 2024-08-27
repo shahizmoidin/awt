@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS Box Model Example</title>
+    <style>
+      
+        .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #333;
+            margin: 15px;
+            background-color: lightblue;
+        }
+
+        /* Different Margins */
+        .box.margin {
+            margin: 30px 10px;
+        }
+
+        /* Different Paddings */
+        .box.padding {
+            padding: 10px 30px;
+        }
+
+        /* Adjusted Width for Border-Box */
+        .box.border-box {
+            box-sizing: border-box;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model</h1>
+    
+    <!-- Basic Box -->
+    <div class="box">Basic Box Model</div>
+    
+    <!-- Box with Different Margin -->
+    <div class="box margin">Box with Different Margins</div>
+    
+    <!-- Box with Different Padding -->
+    <div class="box padding">Box with Different Paddings</div>
+    
+    <!-- Box with Border-Box Sizing -->
+    <div class="box border-box">Box with Border-Box Sizing</div>
+</body>
+</html>
