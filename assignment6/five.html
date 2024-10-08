@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <script>
+        function showColor(color) {
+            alert(`Your favorite color is ${color}`);
+        }
+        window.onload = () => {
+            document.querySelectorAll('input[type="radio"]').forEach(rb => {
+                rb.addEventListener('click', () => showColor(rb.value));
+            });
+        };
+    </script>
+</head>
+<body>
+    <label><input type="radio" value="Red"> Red</label><br>
+    <label><input type="radio" value="Blue"> Blue</label><br>
+    <label><input type="radio" value="Green"> Green</label><br>
+    <label><input type="radio" value="Yellow"> Yellow</label><br>
+    <label><input type="radio" value="Orange"> Orange</label><br>
+</body>
+</html>

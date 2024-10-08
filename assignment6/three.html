@@ -1,0 +1,19 @@
+number of checkboxes related to grocery items to be purchased have been checked
+<!DOCTYPE html>
+
+<head>
+    
+    <script>
+        function countChecked() {
+            let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            alert(`Checked: ${checkboxes.length}`);
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" onclick="countChecked()"> Milk<br>
+    <input type="checkbox" onclick="countChecked()"> Eggs<br>
+    <input type="checkbox" onclick="countChecked()"> Bread<br>
+    <input type="checkbox" onclick="countChecked()"> Cheese<br>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  
+    <script>
+        function compute() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let op = document.getElementById('op').value;
+            if (isNaN(num1) || isNaN(num2) || !['+', '-', '*', '/', '%'].includes(op)) {
+                alert('Invalid input!');
+                return;
+            }
+            let result;
+            switch (op) {
+                case '+': result = num1 + num2; break;
+                case '-': result = num1 - num2; break;
+                case '*': result = num1 * num2; break;
+                case '/': result = num1 / num2; break;
+                case '%': result = num1 % num2; break;
+            }
+            document.getElementById('result').value = result;
+        }
+    </script>
+</head>
+<body onload="alert('Welcome to the Computation page')">
+    <input id="num1" type="text" placeholder="Number 1">
+    <input id="num2" type="text" placeholder="Number 2">
+    <input id="op" type="text" placeholder="Operation (+,-,*,/)">
+    <button onclick="compute()">Compute</button>
+    <input id="result" type="text" readonly>
+</body>
+</html>

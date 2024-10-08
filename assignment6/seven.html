@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+
+    <script>
+        function validate() {
+            let name = document.getElementById('name').value;
+            let age = parseInt(document.getElementById('age').value);
+            let mobile = document.getElementById('mobile').value;
+            let password = document.getElementById('password').value;
+            let confirm = document.getElementById('confirm').value;
+            if (!/^[A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+$/.test(name)) {
+                alert('Enter valid name with capital letters');
+                return;
+            }
+            if (age < 18 || age > 60) {
+                alert('Age must be between 18 and 60');
+                return;
+            }
+            if (!/^[0-9]{10}$/.test(mobile)) {
+                alert('Invalid mobile number');
+                return;
+            }
+            if (!/^[A-Za-z0-9!@#$%^&*()]+$/.test(password) || password !== confirm) {
+                alert('Invalid password or passwords do not match');
+                return;
+            }
+            alert('Registration successful!');
+        }
+    </script>
+</head>
+<body>
+    <input id="name" type="text" placeholder="First Middle Last">
+    <input id="age" type="number" placeholder="Age">
+    <input id="mobile" type="text" placeholder="Mobile Number">
+    <input id="password" type="password" placeholder="Password">
+    <input id="confirm" type="password" placeholder="Confirm Password">
+    <button onclick="validate()">Register</button>
+</body>
+</html>

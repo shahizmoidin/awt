@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+   
+    <script>
+        function parentAlert() {
+            alert('Parent Div Clicked!');
+        }
+        function childAlert() {
+            alert('Child Div Clicked!');
+        }
+    </script>
+</head>
+<body>
+    <div onclick="parentAlert()" style="padding:20px; background-color:lightblue;">
+        Parent
+        <div onclick="childAlert()" style="padding:20px; background-color:lightgreen;">Child</div>
+    </div>
+</body>
+</html>

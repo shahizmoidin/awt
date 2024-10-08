@@ -1,0 +1,19 @@
+how an element can be accessed in different ways
+<!DOCTYPE html>
+
+<head>
+    
+    <script>
+        function access() {
+            const p1 = document.getElementById('p1'); // by ID
+            const p2 = document.getElementsByClassName('para')[0]; // by class
+            const p3 = document.querySelector('p'); // first <p> element
+            alert(p1.innerText + ", " + p2.innerText + ", " + p3.innerText);
+        }
+    </script>
+</head>
+<body onload="access()">
+    <p id="p1">Paragraph 1</p>
+    <p class="para">Paragraph 2</p>
+</body>
+</html>
