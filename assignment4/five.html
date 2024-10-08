@@ -1,0 +1,20 @@
+//Create a simple drawing on an HTML5 canvas element
+<canvas id="myCanvas" width="200" height="200"></canvas>
+<script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Draw a red rectangle
+    ctx.fillStyle = 'red';
+    ctx.fillRect(10, 10, 50, 50);
+    
+    // Draw a circle
+    ctx.beginPath();
+    ctx.arc(100, 100, 30, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Draw a line
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+</script>
