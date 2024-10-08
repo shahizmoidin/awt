@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<head>
+  
+    <script>
+        function countNames() {
+            let names = ['Charlie', 'Maggie', 'Kathy', 'Riley'];
+            let count = names.filter(name => name.endsWith('ie') || name.endsWith('y')).length;
+            alert(`Number of names ending with 'ie' or 'y': ${count}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Count Names Ending with 'ie' or 'y'</h1>
+    <button onclick="countNames()">Count Names</button>
+</body>
+</html>
