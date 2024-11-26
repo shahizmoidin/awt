@@ -1,0 +1,18 @@
+1. Create an XML document for a university and style it using CSS.
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="one.css"?>
+<university>
+    <name>Greenfield University</name>
+    <location>Springfield</location>
+    <departments>
+        <department>
+            <name>Computer Science</name>
+            <head>Dr. Smith</head>
+        </department>
+        <department>
+            <name>Mathematics</name>
+            <head>Dr. Johnson</head>
+        </department>
+    </departments>
+</university>
+
