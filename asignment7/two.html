@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Move Paragraph</title>
+    <style>
+        p {
+            position: absolute;
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">Move me!</p>
+    X: <input type="number" id="x" placeholder="Enter X">
+    Y: <input type="number" id="y" placeholder="Enter Y">
+    <button onclick="movePara()">Move</button>
+
+    <script>
+        function movePara() {
+            const x = document.getElementById("x").value;
+            const y = document.getElementById("y").value;
+            const para = document.getElementById("para");
+            para.style.left = x + "px";
+            para.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>

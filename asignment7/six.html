@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Follow Cursor</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .cursor-image {
+            position: absolute;
+            width: 50px; /* Adjust the size of the image */
+            height: 50px; /* Adjust the size of the image */
+            pointer-events: none; /* Prevent the image from interfering with mouse events */
+        }
+    </style>
+</head>
+<body>
+    <img src="image.png" alt="Cursor Image" class="cursor-image" id="cursorImage">
+    <script>
+        document.addEventListener('click', function(event) {
+            var cursorImage = document.getElementById('cursorImage');
+            cursorImage.style.left = event.clientX + 'px';
+            cursorImage.style.top = event.clientY + 'px';
+        });
+    </script>
+</body>
+</html>

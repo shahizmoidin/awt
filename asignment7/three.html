@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form with Help Box</title>
+</head>
+<body>
+    <form>
+        Name: <input type="text" id="name" onfocus="showHelp('Enter your full name')" onblur="clearHelp()"><br><br>
+        Email: <input type="email" id="email" onfocus="showHelp('Enter your email address')" onblur="clearHelp()"><br><br>
+    </form>
+    <div id="helpBox" style="border: 1px solid black; padding: 10px; width: 300px;">Help messages will appear here.</div>
+
+    <script>
+        function showHelp(message) {
+            document.getElementById("helpBox").innerText = message;
+        }
+
+        function clearHelp() {
+            document.getElementById("helpBox").innerText = "Help messages will appear here.";
+        }
+    </script>
+</body>
+</html>

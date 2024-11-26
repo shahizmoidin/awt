@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Move Text</title>
+    <style>
+        #text {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Welcome to NMAMIT, Nitte</p>
+    <button onclick="move('left')">Move Left</button>
+    <button onclick="move('down')">Move Down</button>
+    <button onclick="move('right')">Move Right</button>
+    <button onclick="move('up')">Move Up</button>
+
+    <script>
+        function move(direction) {
+            const text = document.getElementById("text");
+            const currentTop = parseInt(window.getComputedStyle(text).top);
+            const currentLeft = parseInt(window.getComputedStyle(text).left);
+
+            if (direction === "left") text.style.left = currentLeft - 10 + "px";
+            if (direction === "right") text.style.left = currentLeft + 10 + "px";
+            if (direction === "up") text.style.top = currentTop - 10 + "px";
+            if (direction === "down") text.style.top = currentTop + 10 + "px";
+        }
+    </script>
+</body>
+</html>

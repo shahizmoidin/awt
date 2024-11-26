@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mouse Over Effects</title>
+    <style>
+        h1 {
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        h1:hover {
+            color: red;
+            font-family: 'Comic Sans MS', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to NMAMIT, Nitte</h1>
+    <p onmousemove="showCoordinates(event)">Move the mouse here</p>
+    X: <input type="text" id="x" readonly> Y: <input type="text" id="y" readonly>
+
+    <script>
+        function showCoordinates(event) {
+            document.getElementById("x").value = event.clientX;
+            document.getElementById("y").value = event.clientY;
+        }
+    </script>
+</body>
+</html>

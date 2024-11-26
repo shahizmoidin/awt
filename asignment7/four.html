@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stacking Paragraphs</title>
+    <style>
+        .para {
+            position: absolute;
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p class="para" onclick="bringToTop(this)" style="z-index: 1;">Paragraph 1</p>
+    <p class="para" onclick="bringToTop(this)" style="z-index: 2;">Paragraph 2</p>
+    <p class="para" onclick="bringToTop(this)" style="z-index: 3;">Paragraph 3</p>
+    <p class="para" onclick="bringToTop(this)" style="z-index: 1;">Paragraph 4</p>
+
+    <script>
+        function bringToTop(element) {
+            element.style.zIndex = parseInt(element.style.zIndex) + 10;
+        }
+    </script>
+</body>
+</html>
