@@ -7,14 +7,20 @@
             position: absolute;
             background-color: lightblue;
             padding: 10px;
+            border: 2px solid darkblue; /* Added border */
         }
+        .para1 { top: 10px; left: 10px; } 
+        .para2 { top: 50px; left: 30px; }
+        .para3 { top: 90px; left: 50px; } 
+        .para4 { top: 130px; left: 70px; }
+        .clicked { transform: scale(1.05);}
     </style>
 </head>
 <body>
-    <p class="para" onclick="bringToTop(this)" style="z-index: 1;">Paragraph 1</p>
-    <p class="para" onclick="bringToTop(this)" style="z-index: 2;">Paragraph 2</p>
-    <p class="para" onclick="bringToTop(this)" style="z-index: 3;">Paragraph 3</p>
-    <p class="para" onclick="bringToTop(this)" style="z-index: 1;">Paragraph 4</p>
+    <p class="para para1" onclick="bringToTop(this)" style="z-index: 1;">Paragraph 1</p>
+    <p class="para para2" onclick="bringToTop(this)" style="z-index: 2;">Paragraph 2</p>
+    <p class="para para3" onclick="bringToTop(this)" style="z-index: 3;">Paragraph 3</p>
+    <p class="para para4" onclick="bringToTop(this)" style="z-index: 1;">Paragraph 4</p>
 
     <script>
         function bringToTop(element) {
